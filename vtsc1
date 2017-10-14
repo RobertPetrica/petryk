@@ -1,0 +1,81 @@
+
+#include "stdio.h"
+#include <iostream>
+#include "math.h"
+
+using namespace std;
+int main()
+{
+	float a = 0.0, b = 0.0, c = 0.0, d = 0.0, x1 = 0.0, x2 = 0.0;
+	cout << "a="; cin >> a;
+	cout << "b="; cin >> b;
+	cout << "c="; cin >> c;
+	int ok = 1;
+	while (ok) {
+		if ((a < -7) || (a > 20) || (a == 0)) {
+			cout << "Eroare!'a' nu apartine intervalului\n";
+		
+		}
+		if ((b < -7) || (b > 20)) {
+			cout << "Eroare!'b' nu apartine intervalului\n";
+			
+		}
+		if ((c < -7) || (c > 20)) {
+			cout << "Eroare!'c' nu apartine intervalului\n";
+			
+		}
+		if ((c == 0) && (b != 0)) {
+			x1 = -b / a;
+			printf("Ecuația este de gradul 1 cu soluția : x1= %.1f \n", x1);
+			
+		}
+		if (b == 0) {
+			if (a*c*(-4) < 0) {
+				cout << "Eroare , delta este negativ!\n";
+			
+			}
+			if (c == 0) {
+				x1 = x2 = 0;
+				printf("x1= %.1f \n", x1);
+				printf("x2= %.1f\n", x2);
+				
+			}
+			if (a*c*(-4) > 0) {
+				x1 = -(sqrt(-c / a));
+				x2 = sqrt(-c / a);
+				printf("x1= %.1f \n", x1);
+				printf("x2= %.1f\n", x2);
+				
+			}
+		}
+		if ((a != 0) && (b != 0) && (c != 0)) {
+			d = b*b - 4 * a*c;
+			if (d < 0) {
+				cout << "Eroare , delta este negativ!!!\n";
+				
+			}
+			if (d == 0) {
+				x1 = x2 = -b / (2 * a);
+				printf("x1= %.1f \n", x1);
+				printf("x2= %.1f\n", x2);
+				
+			}
+			if (d > 0) {
+				x1 = (-b - sqrt(d)) / (2 * a);
+				x2 = (-b + sqrt(d)) / (2 * a);
+				printf("x1= %.1f \n", x1);
+				printf("x2= %.1f\n", x2);
+			}
+		}
+		cout << "Introduceti ce comanda doriti mai departe : \n" << "1. Pentru a introduce alte valori\n"  << "0. Pentru a iesi din program\n";
+		cin >> ok;
+		if (ok == 0) return 0;
+		else {
+			a = 0.0, b = 0.0, c = 0.0, d = 0.0, x1 = 0.0, x2 = 0.0;
+			cout << "a="; cin >> a;
+			cout << "b="; cin >> b;
+			cout << "c="; cin >> c;
+		}
+	}
+    return 0;
+}
