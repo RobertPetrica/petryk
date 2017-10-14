@@ -1,5 +1,6 @@
 
 
+
 #include <stdio.h>
 #include <iostream>
 #include "math.h"
@@ -25,10 +26,11 @@ int main()
 			cout << "Eroare!'c' nu apartine intervalului\n";
 			
 		}
-		if ((c == 0) && (b != 0)) {
-			x1 = -b / a;
-			printf("Ecuația este de gradul 1 cu soluția : x1= %.1f \n", x1);
-			
+		 if((c==0)&&(b!=0)){
+            x1= 0.0;
+            x2=-b/a;
+            printf("x1= %.1f \n", x1);
+            printf("x2= %.1f \n", x2);
 		}
 		if (b == 0) {
 			if (a*c*(-4) < 0) {
