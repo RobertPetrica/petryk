@@ -69,9 +69,7 @@ int main()
 				printf("x1= %.1f \n", x1);
 				printf("x2= %.1f\n", x2);
 			}
-			if ((x1<-10) || (x1>10) || (x2<-10) || (x2>10)){
-			        printf("Solutiile nu apartin intervalului\n");
-			}	
+	
 			  
 		}
 		cout << "Introduceti ce comanda doriti mai departe : \n" << "1. Pentru a introduce alte valori\n"  << "0. Pentru a iesi din program\n";
