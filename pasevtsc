@@ -1,0 +1,38 @@
+#include <iostream>
+#include<math.h>
+#include<iomanip>
+
+using namespace std;
+int main()
+{float a, b, c, d, x, x1, x2;
+cout<<"a=";
+cin>>a;
+cout<<"b=";
+cin>>b;
+cout<<"c=";
+cin>>c;
+
+if(a<-7||a>20)
+cout<<"Numarul a nu se afla in interval"<<endl;
+if(b<-7||b>20)
+cout<<"Numarul b nu se afla in interval"<<endl;
+if(c<-7||c>20)
+cout<<"Numarul c nu se afla in interval"<<endl;
+d=b*b-4*a*c;
+
+   if(d==0)
+     { cout<<"Ecuatia are solutii egale!";
+            cout<<"x1=x2="<< -b/(2*a);}
+if(d<0) cout<<"ecuatia nu are solutii reale";
+else if(d>0)
+{x1= (-b+sqrt(d))/(2*a);
+x2= (-b-sqrt(d))/(2*a);
+ cout<<"x1="<<fixed<<setprecision(1)<<x1<<endl;
+ cout<<"x2="<<fixed<<setprecision(1)<<x2<<endl;
+
+
+}
+
+if ((x1<-10 ||x1>10)||(x2<-10||x2>10))
+                    cout<<"Solutiile nu se afla in interval"<<endl;
+}
